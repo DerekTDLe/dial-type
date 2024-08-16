@@ -9,6 +9,7 @@ let currentWordIndex = 0;
 let typedWords = [];
 let correctWords = [];
 let startTime = null;
+let wpmInterval = null;
 let prevResult = '';
 let timer = null;
 let totalCorrectCharacters = 0; // Global variable for correct character count
