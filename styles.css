@@ -72,3 +72,10 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+#wpm{
+    width: 40rem;
+    display: flex;
+    justify-content: space-between;
+}
+
