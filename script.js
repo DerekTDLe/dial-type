@@ -49,7 +49,7 @@ function initialize() {
     currentWordIndex = 0;
     startTime = null;
     //result default inner text
-    resultDefault = 'WPM: x | Accuracy: x% | Time:' + TEST_DURATION/1000 + ' sec | Correct Characters: x';
+    resultDefault = 'WPM: x | Accuracy: x% | Correct Characters: x';
     result.innerText = resultDefault;
     inputBox.value = '';
     inputBox.disabled = false;
@@ -193,7 +193,7 @@ function endTest() {
     const accuracy = totalCharacters > 0 ? (totalCorrectCharacters / totalCharacters) * 100 : 0;
 
     // Display the time taken for the test explicitly
-    result.innerText = `WPM: ${wpm.toFixed(2)} | Accuracy: ${accuracy.toFixed(2)}% | Time taken: ${timeTaken.toFixed(2)} sec | Correct Characters: ${totalCorrectCharacters}`;
+    result.innerText = `WPM: ${wpm.toFixed(2)} | Accuracy: ${accuracy.toFixed(2)}% | Correct Characters: ${totalCorrectCharacters}`;
 
     if (phoneNumberInput.textContent === 'Start a test to begin') {
         phoneNumberInput.textContent = '';

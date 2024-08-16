@@ -28,12 +28,14 @@
         <p id="text-to-type"></p>
         <p id="dummy-line"></p>
     </div>
-    <div id="time-selection">
-        <span class="time-option" onclick="setTestDuration(15000)">15</span> /
-        <span class="time-option" onclick="setTestDuration(30000)">30</span> /
-        <span class="time-option" onclick="setTestDuration(60000)">60</span> seconds
+    <div id = "bottom">
+        <div id="time-selection">
+            <span class="time-option" onclick="setTestDuration(15000)">15</span> /
+            <span class="time-option" onclick="setTestDuration(30000)">30</span> /
+            <span class="time-option" onclick="setTestDuration(60000)">60</span> sec
+        </div>
+        <p id="result"></p>
     </div>
-    <p id="result"></p>
     <input type="text" id="input-box" placeholder="Start typing here..." oninput="checkTyping(event)">
     <button id="next-button" onclick="nextText()">Next</button>
 
