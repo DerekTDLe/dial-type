@@ -54,3 +54,8 @@ Welcome to the **Dial Type** project! This uniquely stupid application requires 
 
 -   Begin typing in the input box to start the test.
 -   Choose the desired test duration using the buttons provided.
+
+# Demo
+
+https://github.com/user-attachments/assets/a5e2a4e5-6f56-42e9-868a-0b755faa1309
+
