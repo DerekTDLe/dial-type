@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Dial Type</h1>
+    <div id="phone-number">
+        <label for="phone-number-input">Enter your phone number using typing tests</label>
+        <br />
+        <br />
+        <div id ="lower">
+            <text type="text" id="phone-number-input">Start a test to begin</text>
+            <button id="phone-number-button" onclick="sendPhoneNumber()">Send</button>
+            <button id="undo-number" onclick="undo()">Undo</button>
+            <button id="reset-number" onclick="resetPhoneNumber()">Reset</button>
+        </div>
+    </div>
+    <br />
+    <div id = "typeBox">
+        <p id="text-to-type"></p>
+        <p id="dummy-line"></p>
+    </div>
+    <div id="time-selection">
+        <span class="time-option" onclick="setTestDuration(15000)">15</span> /
+        <span class="time-option" onclick="setTestDuration(30000)">30</span> /
+        <span class="time-option" onclick="setTestDuration(60000)">60</span> seconds
+    </div>
+    <p id="result"></p>
+    <input type="text" id="input-box" placeholder="Start typing here..." oninput="checkTyping(event)">
+    <button id="next-button" onclick="nextText()">Next</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
