@@ -44,6 +44,7 @@ function initialize() {
 
     textToTypeElement.innerHTML = '';
     typedWords = [];
+    correctWords = [];
     currentWordIndex = 0;
     startTime = null;
     //result default inner text
