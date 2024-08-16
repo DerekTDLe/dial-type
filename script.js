@@ -7,6 +7,7 @@ const phoneNumberInput = document.getElementById('phone-number-input');
 let wordList = [];
 let currentWordIndex = 0;
 let typedWords = [];
+let correctWords = [];
 let startTime = null;
 let prevResult = '';
 let timer = null;
@@ -111,6 +112,7 @@ function checkTyping(event) {
             currentWordSpan.classList.remove('current');
             currentWordSpan.classList.add('correct');
             typedWords.push(typedWord);  // Add the correctly typed word to the list
+            correctWords.push(typedWord);  // Add the correctly typed word to the list
         } else {
             currentWordSpan.classList.remove('current');
             currentWordSpan.classList.add('incorrect');
@@ -150,7 +152,7 @@ function updateWPM() {
     const currentTime = new Date();
     const timeElapsedInMinutes = (currentTime - startTime) / 1000 / 60; // Time in minutes
     //calculate total correct characters by adding the length of each correct word in the typedWords array
-    totalCorrectCharacters = typedWords.reduce((sum, word) => sum + word.length, 0);
+    totalCorrectCharacters = correctWords.reduce((sum, word) => sum + word.length, 0);
     
     // Ensure at least 1 second has passed to prevent initial high spikes
     const safeTimeElapsed = Math.max(timeElapsedInMinutes, 1 / 60);
